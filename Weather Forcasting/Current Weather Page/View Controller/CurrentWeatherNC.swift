@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CurrentWeatherNC.swift
 //  Weather Forcasting
 //
 //  Created by Kolathee Payuhawattana on 22/6/2563 BE.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class CurrentWeatherNC: UINavigationController {
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
   }
-
-
 }
-

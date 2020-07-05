@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DB Helvethaica X v3.2_0.ttf">
+            <string>DBHelvethaicaX-55Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Failure PopupVC-->
+        <scene sceneID="Hmh-O6-G1c">
+            <objects>
+                <viewController storyboardIdentifier="FailurePopupVC" id="7Hf-dH-1L0" customClass="FailurePopupVC" customModule="Weather_Forcasting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axh-85-6sP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-To-o0N" userLabel="Black BG">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oO-SQ-nky" userLabel="Popup">
+                                        <rect key="frame" x="54" y="314" width="306" height="268"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2pk-Ew-gZf" userLabel="Content">
+                                                <rect key="frame" x="6" y="10" width="294" height="248"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="DUG-Wj-oPs" userLabel="Header Group">
+                                                        <rect key="frame" x="0.0" y="0.0" width="294" height="98"/>
+                                                        <subviews>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="failureHeader" translatesAutoresizingMaskIntoConstraints="NO" id="xNX-kk-wLg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="60" id="LXO-2S-KXG"/>
+                                                                </constraints>
+                                                            </imageView>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERROR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-AB-YEQ">
+                                                                <rect key="frame" x="0.0" y="74" width="294" height="24"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="24" id="DlV-U1-smb"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="DBHelvethaicaX-55Regular" family="DB Helvethaica X" pointSize="20"/>
+                                                                <color key="textColor" red="0.9021195769" green="0.2604290843" blue="0.20430621500000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="EHk-3g-LOl" userLabel="Body Group">
+                                                        <rect key="frame" x="0.0" y="103" width="294" height="80"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="An error occurs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvl-hq-t3O">
+                                                                <rect key="frame" x="92" y="0.0" width="110.5" height="80"/>
+                                                                <fontDescription key="fontDescription" name="DBHelvethaicaX-55Regular" family="DB Helvethaica X" pointSize="16"/>
+                                                                <color key="textColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="80" id="MGw-cW-3Ub"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WCA-6R-qwB" userLabel="Button BG">
+                                                        <rect key="frame" x="0.0" y="188" width="294" height="60"/>
+                                                        <subviews>
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i05-LY-unS" userLabel="Close BT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="294" height="60"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bBh-WR-H89" customClass="CustomButton" customModule="Weather_Forcasting" customModuleProvider="target">
+                                                                        <rect key="frame" x="82" y="10" width="130" height="40"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="130" id="mhg-IS-cbr"/>
+                                                                            <constraint firstAttribute="height" constant="40" id="rbv-RR-wp7"/>
+                                                                        </constraints>
+                                                                        <state key="normal" title="Close">
+                                                                            <color key="titleColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                        </state>
+                                                                        <connections>
+                                                                            <action selector="didTapDoneBT:" destination="7Hf-dH-1L0" eventType="touchUpInside" id="GHb-gS-8AM"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                                <constraints>
+                                                                    <constraint firstItem="bBh-WR-H89" firstAttribute="centerX" secondItem="i05-LY-unS" secondAttribute="centerX" id="JV8-Kk-hug"/>
+                                                                    <constraint firstItem="bBh-WR-H89" firstAttribute="centerY" secondItem="i05-LY-unS" secondAttribute="centerY" id="Sfu-m3-OIj"/>
+                                                                </constraints>
+                                                            </view>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="RVi-pl-y0V"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="EHk-3g-LOl" firstAttribute="leading" secondItem="2pk-Ew-gZf" secondAttribute="leading" id="7KE-ol-aQe"/>
+                                                    <constraint firstItem="WCA-6R-qwB" firstAttribute="leading" secondItem="2pk-Ew-gZf" secondAttribute="leading" id="I20-lg-0Dc"/>
+                                                    <constraint firstAttribute="trailing" secondItem="DUG-Wj-oPs" secondAttribute="trailing" id="MMo-WC-W1D"/>
+                                                    <constraint firstItem="DUG-Wj-oPs" firstAttribute="leading" secondItem="2pk-Ew-gZf" secondAttribute="leading" id="g76-Ny-AN5"/>
+                                                    <constraint firstAttribute="trailing" secondItem="EHk-3g-LOl" secondAttribute="trailing" id="oSC-j4-jPI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="WCA-6R-qwB" secondAttribute="trailing" id="xZA-1h-be1"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="2pk-Ew-gZf" secondAttribute="bottom" constant="10" id="5Pg-OS-sz5"/>
+                                            <constraint firstItem="2pk-Ew-gZf" firstAttribute="top" secondItem="1oO-SQ-nky" secondAttribute="top" constant="10" id="I6e-3f-vOk"/>
+                                            <constraint firstAttribute="trailing" secondItem="2pk-Ew-gZf" secondAttribute="trailing" constant="6" id="OEa-sK-yib"/>
+                                            <constraint firstAttribute="width" constant="306" id="RTd-h0-xau"/>
+                                            <constraint firstItem="2pk-Ew-gZf" firstAttribute="leading" secondItem="1oO-SQ-nky" secondAttribute="leading" constant="6" id="U1S-Mu-cNz"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1019607843" green="0.1019607843" blue="0.1019607843" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="1oO-SQ-nky" firstAttribute="centerY" secondItem="6Mf-To-o0N" secondAttribute="centerY" id="Zb8-xp-Hup"/>
+                                    <constraint firstItem="1oO-SQ-nky" firstAttribute="centerX" secondItem="6Mf-To-o0N" secondAttribute="centerX" id="kMx-CV-5jj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Mf-To-o0N" firstAttribute="leading" secondItem="QJA-cw-43H" secondAttribute="leading" id="Scj-gl-Wtg"/>
+                            <constraint firstItem="6Mf-To-o0N" firstAttribute="top" secondItem="axh-85-6sP" secondAttribute="top" id="TPx-ob-AZS"/>
+                            <constraint firstItem="6Mf-To-o0N" firstAttribute="trailing" secondItem="QJA-cw-43H" secondAttribute="trailing" id="v9J-7u-m9J"/>
+                            <constraint firstAttribute="bottom" secondItem="6Mf-To-o0N" secondAttribute="bottom" id="viF-77-6aa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QJA-cw-43H"/>
+                    </view>
+                    <connections>
+                        <outlet property="bodyLabel" destination="qvl-hq-t3O" id="box-Nr-50E"/>
+                        <outlet property="doneBT" destination="bBh-WR-H89" id="t8h-km-TrP"/>
+                        <outlet property="titleLabel" destination="Ice-AB-YEQ" id="VFC-4d-qXb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K7r-rW-aE2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5154" y="-2365"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="failureHeader" width="58" height="58"/>
+    </resources>
+</document>
